@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: 技术博客
+subtitle: 记录我的编程时光
+description: 
 author: GaoXingyun
 language: zh-CN
 timezone: Asia/Shanghai
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
