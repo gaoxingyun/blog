@@ -5,15 +5,16 @@
 # Site
 title: 技术博客
 subtitle: 记录我的编程时光
-description: 弱小和无知不是生存的最大阻碍，傲慢才是。
+description: 弱小和无知不是生存的障碍，傲慢才是。
 author: 左子树
 avatar: /images/avatar.jpg
 language: zh-Hans
 timezone: Asia/Shanghai
 
 
-# 自定义
+# own
 baidu_analytics: cd18336818140dfda9e7e878178ccb3a
+since: 2016
 
 
 # URL
