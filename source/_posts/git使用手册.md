@@ -45,7 +45,7 @@ tags:
 ## 最佳实践
 #### 使用场景
 * 在远程仓库新建一个项目，并克隆到本地
-```
+``` shell
 git clone git@172.16.8.158:gao.xy/xyWeb.git;  
 cd xyWeb;
 touch README.md;
