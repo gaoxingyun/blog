@@ -5,6 +5,7 @@ categories:
 - 总结
 tags:
 - java
+- spring
 ---
 
 #### Eureka服务注册中心
@@ -54,3 +55,5 @@ eureka:
 ```
 ##### 登录Eureka管理端
 - 登录http://localhost:10000/eureka/即可查看注册到Eureka的服务
+
+

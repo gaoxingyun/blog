@@ -1,5 +1,5 @@
 ---
-title: Markdown语法手册
+title: Markdown语法
 date: 2016-12-07 11:02:37
 categories: 
 - 总结
