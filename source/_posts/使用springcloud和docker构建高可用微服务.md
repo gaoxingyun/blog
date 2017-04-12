@@ -12,7 +12,7 @@ tags:
 
 ##### gradle配置
 - build.gradle
-``` 
+```gradle
 dependencyManagement {
 	imports {
 		mavenBom ('org.springframework.cloud:spring-cloud-dependencies:Camden.SR3')
@@ -41,7 +41,7 @@ public class XyEurekaApplication {
 ##### application配置
 - 需要配置程序自身不作为客户端注册服务
 - application.yml
-```
+```yml
 server:
   port: 10000
 eureka:

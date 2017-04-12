@@ -13,7 +13,7 @@ tags:
 
 ###### 客户端ajax请求代码
 
-```
+```javascript
 <script language="JavaScript">
         $(document).ready(function () {
             $('#test').click(function () {
@@ -40,7 +40,7 @@ tags:
 ###### 服务端代码
 
 - 服务端配置代码
-```
+```java
 package com.xy.demo.common.config;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -58,7 +58,7 @@ public class JsonpAdvice extends AbstractJsonpResponseBodyAdvice{
 ```
 
 - 服务端api代码
-```
+```java
     @RequestMapping(value = "/web/test/table", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody()
     public Map testTable() {

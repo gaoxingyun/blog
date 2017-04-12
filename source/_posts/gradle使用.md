@@ -2,7 +2,7 @@
 title: gradle使用
 date: 2017-02-17 16:34:12
 categories: 
-- 总结
+- 工具
 tags:
 - java
 ---

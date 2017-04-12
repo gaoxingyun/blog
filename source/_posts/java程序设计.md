@@ -6,3 +6,9 @@ categories:
 tags:
 - java
 ---
+
+
+
+#### java编程注意事项
+
+- 避免在循环语句中创建对象

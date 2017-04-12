@@ -62,7 +62,7 @@ tags:
 
 #### 基于java构建运行springboot程序的镜像
 1. 编写Dockerfile
-```
+```dockerfile
 FROM java:7
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ADD app.tar /root/
@@ -82,10 +82,10 @@ CMD ["java","-jar","app.jar"]
 ## docker安装mysql数据库
 
 #### mysql安装
-```
-docker search mysql
-docker pull mysql
-docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -v /opt/docker/mysql:/var/lib/mysql  mysql
+```bash
+docker search mysql;
+docker pull mysql;
+docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -v /opt/docker/mysql:/var/lib/mysql  mysql;
 ```
 
 #### 登录数据库
@@ -102,16 +102,16 @@ password: 123456
 ## docker安装oracle数据库
 
 #### oralce安装
-```
-docker search oracle
-docker pull wnameless/oracle-xe-11g
-docker run -d --name oracle -p 11122:22 -p 11521:1521  -e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g
+```bash
+docker search oracle;
+docker pull wnameless/oracle-xe-11g;
+docker run -d --name oracle -p 11122:22 -p 11521:1521  -e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g;
 ```
 
 #### 远程连接
-```
-ssh root@localhost -p 11122
-password: admin
+```bash
+ssh root@localhost -p 11122;
+password: admin;
 ```
 
 #### 登录数据库
@@ -133,10 +133,10 @@ password: oracle
 ## docker安装redis数据库
 
 #### 安装redis
-```
-docker search redis
-docker pull redis
-docker run --name redis -d  -v  /opt/docker/redis/data:/data -p 6379:6379  redis redis-server --appendonly yes
+```bash
+docker search redis;
+docker pull redis;
+docker run --name redis -d  -v  /opt/docker/redis/data:/data -p 6379:6379  redis redis-server --appendonly yes;
 ```
 
 #### 登录数据库
@@ -153,10 +153,10 @@ password:
 ## docker安装rabbotmq消息队列
 
 #### 安装rabbitmq
-```
-docker search rabbitmq:3-management
-docker pull rabbitmq:3-management
-docker run -d --name rabbitmq --hostname rabbitmq  -e RABBITMQ_DEFAULT_USER=user -e  RABBITMQ_DEFAULT_PASS=123456 -p 15672:15672 -p 5672:5672 -v /opt/docker/rabbitmq:/var/lib/rabbitmq rabbitmq:3-management
+```bash
+docker search rabbitmq:3-management;
+docker pull rabbitmq:3-management;
+docker run -d --name rabbitmq --hostname rabbitmq  -e RABBITMQ_DEFAULT_USER=user -e  RABBITMQ_DEFAULT_PASS=123456 -p 15672:15672 -p 5672:5672 -v /opt/docker/rabbitmq:/var/lib/rabbitmq rabbitmq:3-management;
 ```
 
 #### 连接rabbitmq
@@ -177,9 +177,9 @@ password: 123456
 
 #### 安装elk
 ```
-docker search elk
-docker pull sebp/elk
-docker run -d -it --name elk -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk
+docker search elk;
+docker pull sebp/elk;
+docker run -d -it --name elk -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk;
 ```
 
 #### 登录管理平台
