@@ -162,7 +162,7 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
   - SortedMap
   - NavigableMap
   - TreeMap （用二叉树排序）
-  - HashMap
+  - HashMap (线程不安全，数组+链表实现)
   - LinkedHashMap
   - HashTable
   - EmumMap
@@ -350,7 +350,7 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
 
 ##### 类加载机制（委托加载机制）
 
-- 当一个类需要被加载时，它会去请求调用它的父加载器，从最顶级的父加载器向子级寻找。原始类加载器 -> 扩展类加载器 -> 应用加载器顺序寻找，此机制可以防止用户实现的类覆盖掉JavaApi。eg：自定义一个java.lang.Long类，运行时实际执行的是JavaApi中的Lang。
+- 当一个类需要被加载时，它会去请求调用它的父加载器，从最顶级的父加载器向子级寻找。原始类加载器 -> 扩展类加载器 -> 应用加载器顺序寻找，此机制可以防止用户实现的类覆盖掉JavaApi。eg：自定义一个java.lang.Long类，运行时实际执行的是JavaApi中的Long。
 
 #### 垃圾回收
 
@@ -413,5 +413,5 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
 - 尽量少使用静态变量;
 - 缓存常用的对象:可以使用开源的开源缓存实现，eg：OSCache，Ehcache;
 - 尽量不使用finalize()方法;
-- 在必要的时候可以考虑使用软引用SoftReference
+- 在必要的时候可以考虑使用软引用SoftReference;
 

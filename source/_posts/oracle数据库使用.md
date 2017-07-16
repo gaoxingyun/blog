@@ -45,3 +45,16 @@ tags:
 - 删除用户和其数据，cascade表示删除数据，需此用户无连接。
         drop user username cascade;
 
+
+## ORACLE数据库问题
+
+#### 删除物化视图log表导致insert,delete,update报ORA-00942表或视图不存在
+
+之前使用阿里yugong工具迁移数据库时自动创建了物化视图log表，之后同事清理不用的表时直接使用drop table删除了物化视图log表，第二天使用数据库发现select正常，insert、delete、update就报 ORA-00942: table or view does not exist。
+
+##### 问题解决
+- 查询dba_mview_logs中存在，而的log表不存在的对象
+select 'drop materialized view log on '||mvl.log_owner||'.'||mvl.master||';' cmd from dba_mview_logs mvl where not exists ( select table_name from dba_tables tab where tab.owner = mvl.log_owner and tab.table_name = mvl.log_table ) ;
+直接执行查询得到结果即可正确删除物化视图日志，解决问题。
+
+参考[http://blog.itpub.net/27000195/viewspace-1400038](http://blog.itpub.net/27000195/viewspace-1400038)
