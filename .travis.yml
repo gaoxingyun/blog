@@ -17,6 +17,9 @@ before_script:
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
+# 设置正确的时区，修复时间不正确的问题
+- export TZ='Asia/Shanghai'
+- source ~/.bashrc
 install:
 - npm install
 script:
