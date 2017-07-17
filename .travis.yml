@@ -7,7 +7,7 @@ cache:
   - node_modules
 before_install:
 - openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
-  -in id_rsa.enc -out ./.ssh/id_rsa -d
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
