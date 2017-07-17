@@ -7,14 +7,18 @@ cache:
     - node_modules
 before_install:
 - openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
-  -in id_rsa.enc -out ../id_rsa -d
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
 - git config --global user.name 'gaoxingyun'
 - git config --global user.email 'xingyungao@hotmail.com'
-- sed -i'' "s~git@github.com:gaoxingyun/blog.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/gaoxingyun/repo.git~"
-  _config.yml
+# 改变文件权限
+- chmod 600 ~/.ssh/id_rsa
+# 配置 ssh
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
 install:
 - npm install
 script:
