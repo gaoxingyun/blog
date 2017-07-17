@@ -26,3 +26,5 @@ script:
 - hexo generate
 after_success:
 - hexo deploy
+# 杀掉ssh-agent进程
+- ssh-agent -k
