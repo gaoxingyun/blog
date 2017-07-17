@@ -4,22 +4,19 @@ branches:
   - master
 cache:
   directories:
-    - node_modules
+  - node_modules
 before_install:
 - openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  -in id_rsa.enc -out ./.ssh/id_rsa -d
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
-# git 配置
 - git config --global user.name 'gaoxingyun'
 - git config --global user.email 'xingyungao@hotmail.com'
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
-# 设置正确的时区，修复时间不正确的问题，此命令导致命令执行结束travis不能正常退出，一直显示update tz
-# - export TZ='Asia/Shanghai'
 install:
 - npm install
 script:
