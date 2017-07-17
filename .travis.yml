@@ -1,0 +1,19 @@
+# travis配置文件
+language: node_js
+branches:
+  only:
+  - master #源码分支名称
+before_install:
+- npm install -g hexo
+- npm install -g hexo-cli
+before_script:
+- git config --global user.name 'gaoxingyun'
+- git config --global user.email 'xingyungao@hotmail.com'
+- sed -i'' "s~git@github.com:gaoxingyun/blog.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/gaoxingyun/repo.git~" _config.yml
+install:
+- npm install
+script:
+- hexo clean
+- hexo generate
+after_success:
+- hexo deploy
