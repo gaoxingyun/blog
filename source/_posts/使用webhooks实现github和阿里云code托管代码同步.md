@@ -11,7 +11,7 @@ tags:
 - github的私有仓库太贵，自己搭建的gitlab又太费服务器资源，好在阿里云提供了一个代码托管平台[https://code.aliyun.com](https://code.aliyun.com)，可以创建私有仓库。
 
 1. 将github代码导入到阿里云code。
-2. 
+2. 为github仓库创建webhooks事件。
 
 ## webhooks推送
 
