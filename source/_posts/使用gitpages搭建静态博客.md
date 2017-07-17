@@ -7,7 +7,13 @@ tags:
 - 博客
 ---
 
-## 使用hexo工具生成静态博客
+## 静态博客生成工具
+
+#### 使用jekyll工具生成静态博客
+
+- 
+
+#### 使用hexo工具生成静态博客
 
 ###### 参考文档
 [https://pages.github.com](https://pages.github.com)
@@ -15,11 +21,15 @@ tags:
 [http://theme-next.iissnan.com](http://theme-next.iissnan.com)
 
 
-## 使用Travis CI在线持续集成工具实现博客自动部署
+#### 使用Travis CI在线持续集成工具实现博客自动部署
+
+- Travis CI时一个在线持续集成工具，通过他我们可以实现push代码到远程仓库后，自动发布部署我们的博客。
+
+###### 参考文档
+[https://segmentfault.com/a/1190000004667156](https://segmentfault.com/a/1190000004667156)
 
 
-
-## 为静态博客添加自定义域名
+#### 为静态博客添加自定义域名
 
 1. 购买域名
 2. 添加CNAME解析记录，例如：
