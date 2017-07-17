@@ -9,14 +9,19 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
+
+before_script:
+
+# 免密码登陆ssh
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name 'gaoxingyun'
 - git config --global user.email 'xingyungao@hotmail.com'
 
-before_script:
-- echo "before_script"
+# 修改时区
+- export TZ=Asia/Shanghai
+
 install:
 - npm install -g hexo
 - npm install -g hexo-cli
@@ -26,5 +31,6 @@ script:
 - hexo generate
 after_success:
 - hexo deploy
+
 # 杀掉ssh-agent进程
 - ssh-agent -k
