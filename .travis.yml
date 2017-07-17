@@ -1,15 +1,20 @@
-# travis配置文件
 language: node_js
 branches:
   only:
-  - master #源码分支名称
+  - master
+cache:
+  directories:
+    - node_modules
 before_install:
+- openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
+  -in id_rsa.enc -out ../id_rsa -d
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
 - git config --global user.name 'gaoxingyun'
 - git config --global user.email 'xingyungao@hotmail.com'
-- sed -i'' "s~git@github.com:gaoxingyun/blog.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/gaoxingyun/repo.git~" _config.yml
+- sed -i'' "s~git@github.com:gaoxingyun/blog.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/gaoxingyun/repo.git~"
+  _config.yml
 install:
 - npm install
 script:
