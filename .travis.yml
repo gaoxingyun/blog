@@ -11,6 +11,7 @@ before_install:
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
+# git 配置
 - git config --global user.name 'gaoxingyun'
 - git config --global user.email 'xingyungao@hotmail.com'
 - chmod 600 ~/.ssh/id_rsa
@@ -19,7 +20,6 @@ before_script:
 - cp .travis/ssh_config ~/.ssh/config
 # 设置正确的时区，修复时间不正确的问题
 - export TZ='Asia/Shanghai'
-- source ~/.bashrc
 install:
 - npm install
 script:
