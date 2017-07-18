@@ -152,6 +152,14 @@ server {
 
 [http://nginx.org/en/docs/varindex.html](http://nginx.org/en/docs/varindex.html)
 
+##### nginx跨域设置
+- 添加以下几个头
+```
+add_header 'Access-Control-Allow-Origin' '*';
+add_header 'Access-Control-Allow-Credentials' 'true';
+add_header 'Access-Control-Allow-Methods' '*';
+```
+
 #### 问题
 
 - 
