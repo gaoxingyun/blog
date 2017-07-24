@@ -153,7 +153,7 @@ server {
 [http://nginx.org/en/docs/varindex.html](http://nginx.org/en/docs/varindex.html)
 
 ##### nginx跨域设置
-- 添加以下几个头
+- 可以通过nginx反向代理实现跨域访问，这也是一种超简单的跨域方式，需要添加以下几个头
 ```
 add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Credentials' 'true';
