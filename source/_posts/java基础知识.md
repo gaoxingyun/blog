@@ -415,3 +415,9 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
 - 尽量不使用finalize()方法;
 - 在必要的时候可以考虑使用软引用SoftReference;
 
+
+
+
+
+
+
