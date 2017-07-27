@@ -39,6 +39,11 @@ tags:
 #### 连接容器
 - `docker exec -it <容器名／容器ID> /bin/bash`
 
+
+#### 复制文件
+- `docker cp <容器名／容器ID>:容器文件路径 主机路径`
+
+
 #### 创建容器
 - `docker run`
 > -d 使用后台模式运行

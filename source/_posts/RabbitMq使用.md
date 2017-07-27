@@ -41,3 +41,19 @@ localhost:5672
 #### 博客
 
 - [springboot使用示例](http://www.jianshu.com/p/e1258c004314)
+
+
+#### 插件
+
+- http://www.rabbitmq.com/community-plugins.html
+
+###### 常用插件
+
+- 延时消息插件  https://bintray.com/rabbitmq/community-plugins/rabbitmq_delayed_message_exchange/v3.6.x#files
+
+###### 插件操作
+
+- `rabbitmq-plugins enable rabbitmq_management`       启用插件
+- `rabbitmq-plugins disable rabbitmq_management`      禁用插件
+- `rabbitmq-plugins list`                             查看插件列表
+
