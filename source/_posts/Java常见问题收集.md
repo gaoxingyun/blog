@@ -32,4 +32,5 @@ tags:
 - Executor是线程池的接口，Executors是创建线程池的类，提供了若干个静态方法，用于生成不同类型的线程池。
 12. Collection和Collections区别？
 - Collection是集合类的接口，Collections是集合类的工具类，提供了集合的一些装饰方法，比如将线程不安全的集合类转换为线程安全的集合类。
-
+13. 如何线程安全的使用Map？
+- ConcurrentHashMap, Hashtable, Collections.synchronizedMap(), ConcurrentHashMap在线程安全的基础上提供了更好的写并发能力，但同时降低了对读一致性的要求。[ConcurrentHashMap解释](http://www.importnew.com/22007.html)
