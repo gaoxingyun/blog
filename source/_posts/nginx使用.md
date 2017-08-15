@@ -7,12 +7,11 @@ tags:
 - 
 ---
 
-
 ## nginx使用
 
 #### nginx安装
 
-- 暂缺
+- [http://www.cnblogs.com/taiyonghai/p/6728707.html](http://www.cnblogs.com/taiyonghai/p/6728707.html)
 
 #### nginx配置文件
 

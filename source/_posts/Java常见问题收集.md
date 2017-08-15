@@ -10,6 +10,7 @@ tags:
   - 安全性，效率
 2. HashMap的源码，实现原理，底层结构。
   - 数组 + 链表
+  - 初始因子为16，满了后扩容。通过计算key的hash值取模得到数据在数组中的下标，直接访问。
 3. Java有内存泄漏吗？
   - 语法级别没有，实际中文件等资源不关闭可能会导致资源一直占有，类似于内存泄漏。
 4. 一个java文件可以有几个类？
@@ -34,3 +35,5 @@ tags:
 - Collection是集合类的接口，Collections是集合类的工具类，提供了集合的一些装饰方法，比如将线程不安全的集合类转换为线程安全的集合类。
 13. 如何线程安全的使用Map？
 - ConcurrentHashMap, Hashtable, Collections.synchronizedMap(), ConcurrentHashMap在线程安全的基础上提供了更好的写并发能力，但同时降低了对读一致性的要求。[ConcurrentHashMap解释](http://www.importnew.com/22007.html)
+14. 双重检查锁的单例模式为什么在JDK1.5之前是线程不安全的？
+- 因为知道JDK1.5才正确的处理了指令重排序的问题，之前由于指令重排序导致线程不安全。
