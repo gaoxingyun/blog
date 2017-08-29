@@ -159,6 +159,21 @@ add_header 'Access-Control-Allow-Credentials' 'true';
 add_header 'Access-Control-Allow-Methods' '*';
 ```
 
+
+##### nginx代理本地html目录配置
+
+```
+# 将需代理目录所属用户加入到nginx.conf下，否则会报(13: Permission denied)
+user nginx pmweb;
+
+# 代理配置, 会访问 /home/user/html/index.html文件。
+location  /html {
+               root /home/user;
+               index index.html;
+             }
+```
+
+
 #### 问题
 
 - 

@@ -304,3 +304,15 @@ Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
 ```
 chkconfig -list  查看开机自启动项
 ```
+
+
+## 文本查看命令
+
+#### cat
+
+#### tail
+
+#### grep
+
+
+#### awk
