@@ -158,4 +158,35 @@ tags:
 
 #### spring声明式缓存
 
-######
+###### 使用方式
+1. 使用spring-boot并引入依赖
+``` gradle
+// cache
+compile('org.springframework.boot:spring-boot-starter-cache')
+compile('com.github.ben-manes.caffeine:caffeine')
+```
+2. 启用声明式缓存配置
+```java
+// 启用声明式缓存配置
+@EnableCaching
+@Configuration
+public class CacheConfig {
+}
+```
+3. 使用声明式缓存
+```java
+// 使用声明式缓存
+@Cacheable(value = "transJnl", key = "#localSerial")
+public TransJnl findTransJnlsByLocalSerial(String localSerial) {
+	return transJnlMapper.findTransJnlsByLocalSerial(localSerial);
+}
+```
+4. 更改application配置文件，设置缓存类型，并设置最大容量和过期时间
+``` yml
+spring:
+ cache:
+    type: CAFFEINE
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=5s
+```
+
