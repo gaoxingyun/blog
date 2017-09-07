@@ -1,5 +1,5 @@
 ---
-title: RedHat搭建测试环境
+title: redhat搭建测试环境
 date: 2017-08-18 08:33:35
 categories:
 - 问题

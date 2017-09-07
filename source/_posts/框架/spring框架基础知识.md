@@ -1,8 +1,8 @@
 ---
-title: Spring框架总结
+title: spring框架基础知识
 date: 2017-03-04 23:32:56
 categories:
-- 基础
+- 框架
 tags:
 - java
 ---

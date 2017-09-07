@@ -1,5 +1,5 @@
 ---
-title: java设计模式
+title: java设计模式基础知识
 date: 2017-03-23 11:18:13
 categories: 
 - 基础

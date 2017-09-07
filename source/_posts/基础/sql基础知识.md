@@ -1,5 +1,5 @@
 ---
-title: sql语句学习
+title: sql基础知识
 date: 2017-02-04 14:58:31
 categories: 
 - 基础

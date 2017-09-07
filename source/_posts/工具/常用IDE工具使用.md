@@ -1,12 +1,12 @@
 ---
-title: 常用IDE使用
+title: 常用IDE工具使用
 date: 2017-02-25 12:11:17
 categories: 
 - 工具
 tags:
 ---
 
-## 常用IDE使用
+## 常用IDE工具使用
 
 ### 安装
 

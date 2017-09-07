@@ -1,8 +1,8 @@
 ---
-title: ORM框架
+title: orm框架基础知识
 date: 2017-03-04 20:36:42
 categories:
-- 基础
+- 框架
 tags:
 - java
 ---

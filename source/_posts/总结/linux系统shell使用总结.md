@@ -1,5 +1,5 @@
 ---
-title: linux系统shell使用
+title: linux系统shell使用总结
 date: 2017-07-18 22:30:15
 categories: 
 - 总结
