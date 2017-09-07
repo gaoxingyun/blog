@@ -77,3 +77,4 @@ deploy:
   type: git
   repo: git@github.com:gaoxingyun/gaoxingyun.github.io.git
   branch: master
+
