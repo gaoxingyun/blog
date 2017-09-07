@@ -9,6 +9,3 @@ tags:
 #### handless模式
 
 [http://www.oracle.com/technetwork/articles/javase/headless-136834.html](http://www.oracle.com/technetwork/articles/javase/headless-136834.html)
-```
-
-```
