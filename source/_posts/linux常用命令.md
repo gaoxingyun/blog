@@ -316,3 +316,18 @@ chkconfig -list  查看开机自启动项
 
 
 #### awk
+
+- awk是一个文本分析工具，用来解析文本
+
+```
+# 示例
+
+# 以空格为分隔符获取第0列
+awk '{printf $0}'
+
+# 以:为分隔符获取第1列
+awk -F ':' '{printf $1}'
+
+# 根据端口号获得进程号
+netstat -tlnp | grep 9999 | awk '{printf $7}' | awk -F '/' '{printf $1}'
+```
