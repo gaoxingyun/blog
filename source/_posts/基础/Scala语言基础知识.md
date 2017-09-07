@@ -2,7 +2,7 @@
 title: Scala语言基础知识
 date: 2017-03-03 11:14:33
 categories: 
-- 基础知识
+- 基础
 tags:
 - java
 ---

@@ -2,7 +2,7 @@
 title: ORM框架
 date: 2017-03-04 20:36:42
 categories:
-- 基础知识
+- 基础
 tags:
 - java
 ---

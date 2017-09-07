@@ -2,7 +2,7 @@
 title: JVM基础知识
 date: 2017-08-15 11:16:47
 categories: 
-- 基础知识
+- 基础
 tags:
 - java
 ---

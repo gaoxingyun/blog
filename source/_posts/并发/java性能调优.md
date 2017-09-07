@@ -2,7 +2,7 @@
 title: java性能调优
 date: 2016-12-07 10:47:28
 categories: 
-- 总结
+- 并发
 tags: 
 - java
 - 并发

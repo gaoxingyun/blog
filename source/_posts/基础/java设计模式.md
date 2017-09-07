@@ -2,7 +2,7 @@
 title: java设计模式
 date: 2017-03-23 11:18:13
 categories: 
-- 总结
+- 基础
 tags:
 - java
 ---

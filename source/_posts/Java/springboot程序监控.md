@@ -2,7 +2,7 @@
 title: springboot程序监控
 date: 2017-07-28 13:50:20
 categories:
-- 工具
+- Java
 tags:
 - java
 - spring

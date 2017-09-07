@@ -1,8 +1,8 @@
 ---
 title: oracle数据库使用
 date: 2016-12-07 19:49:38
-categories:
-- 总结
+categories: 
+- 工具
 tags:
 - database
 ---

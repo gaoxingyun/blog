@@ -1,8 +1,8 @@
 ---
 title: linux常用命令
 date: 2017-06-21 08:52:39
-categories:
-- 基础知识
+categories: 
+- 总结
 tags:
 - 计算机
 ---

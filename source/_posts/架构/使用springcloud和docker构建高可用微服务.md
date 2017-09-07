@@ -2,7 +2,7 @@
 title: 使用springcloud和docker构建高可用微服务
 date: 2016-12-15 15:59:54
 categories: 
-- 总结
+- 架构
 tags:
 - java
 - spring

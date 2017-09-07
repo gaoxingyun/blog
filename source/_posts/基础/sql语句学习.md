@@ -2,7 +2,7 @@
 title: sql语句学习
 date: 2017-02-04 14:58:31
 categories: 
-- 总结
+- 基础
 tags:
 - sql
 ---

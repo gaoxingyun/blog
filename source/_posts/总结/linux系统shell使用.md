@@ -1,8 +1,8 @@
 ---
 title: linux系统shell使用
 date: 2017-07-18 22:30:15
-categories:
-- 工具
+categories: 
+- 总结
 tags:
 - shell
 ---

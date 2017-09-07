@@ -2,7 +2,7 @@
 title: ajax跨域调用
 date: 2017-02-12 15:16:53
 categories:
-- 总结
+- 问题
 tags:
 - java
 ---

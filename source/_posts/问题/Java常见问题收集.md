@@ -1,6 +1,8 @@
 ---
 title: Java常见问题收集
 date: 2017-03-03 17:02:28
+categories: 
+- 问题
 tags:
 ---
 

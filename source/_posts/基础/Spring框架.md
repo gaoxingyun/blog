@@ -2,7 +2,7 @@
 title: Spring框架总结
 date: 2017-03-04 23:32:56
 categories:
-- 基础知识
+- 基础
 tags:
 - java
 ---

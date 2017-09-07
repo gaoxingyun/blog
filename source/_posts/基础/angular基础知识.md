@@ -2,7 +2,7 @@
 title: angular基础知识
 date: 2017-08-21 10:45:21
 categories: 
-- 基础知识
+- 基础
 tags: 
 - 前端
 ---

@@ -2,7 +2,7 @@
 title: node.js基础知识
 date: 2017-02-26 17:47:53
 categories: 
-- 基础知识
+- 基础
 tags:
 - node.js
 ---

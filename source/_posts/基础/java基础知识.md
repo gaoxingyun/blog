@@ -2,7 +2,7 @@
 title: java基础知识
 date: 2017-02-06 09:37:07
 categories: 
-- 基础知识
+- 基础
 tags:
 - java
 ---

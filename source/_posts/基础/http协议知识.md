@@ -2,7 +2,7 @@
 title: http协议知识
 date: 2017-06-19 10:58:02
 categories: 
-- 基础知识
+- 基础
 tags:
 - http
 ---

@@ -1,6 +1,8 @@
 ---
 title: 使用ssh进行网络端口转发
 date: 2017-05-20 07:34:10
+categories: 
+- 工具
 tags:
 ---
 

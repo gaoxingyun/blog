@@ -2,7 +2,7 @@
 title: java_web基础知识
 date: 2017-02-27 13:13:47
 categories: 
-- 基础知识
+- 基础
 tags:
 ---
 
