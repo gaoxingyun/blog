@@ -4,7 +4,8 @@ date: 2017-07-18 22:30:15
 categories: 
 - 总结
 tags:
-- shell
+- 总结
+- linux
 ---
 
 ###### 后台允许进程

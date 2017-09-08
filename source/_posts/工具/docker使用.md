@@ -4,8 +4,8 @@ date: 2016-12-10 18:08:45
 categories:
 - 工具
 tags:
-- docker
-- database
+- 工具
+- 数据库
 ---
 
 # docker使用

@@ -4,7 +4,8 @@ date: 2017-02-26 17:47:53
 categories: 
 - 基础
 tags:
-- node.js
+- 基础
+- js
 ---
 
 ## node.js基础知识总结

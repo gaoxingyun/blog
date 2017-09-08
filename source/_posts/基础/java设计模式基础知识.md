@@ -4,7 +4,9 @@ date: 2017-03-23 11:18:13
 categories: 
 - 基础
 tags:
+- 基础
 - java
+- 设计模式
 ---
 
 # Java设计模式

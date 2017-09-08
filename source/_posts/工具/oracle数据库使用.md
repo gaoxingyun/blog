@@ -4,7 +4,8 @@ date: 2016-12-07 19:49:38
 categories: 
 - 工具
 tags:
-- database
+- 工具
+- 数据库
 ---
 
 ## 重启数据库服务

@@ -4,8 +4,8 @@ date: 2016-12-15 15:59:54
 categories: 
 - 架构
 tags:
+- 架构
 - java
-- spring
 ---
 
 #### Eureka服务注册中心

@@ -4,7 +4,8 @@ date: 2017-06-21 08:52:39
 categories: 
 - 总结
 tags:
-- 计算机
+- 总结
+- linux
 ---
 
 
