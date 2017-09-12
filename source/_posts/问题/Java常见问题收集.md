@@ -40,3 +40,5 @@ tags:
 - ConcurrentHashMap, Hashtable, Collections.synchronizedMap(), ConcurrentHashMap在线程安全的基础上提供了更好的写并发能力，但同时降低了对读一致性的要求。[ConcurrentHashMap解释](http://www.importnew.com/22007.html)
 14. 双重检查锁的单例模式为什么在JDK1.5之前是线程不安全的？
 - 因为知道JDK1.5才正确的处理了指令重排序的问题，之前由于指令重排序导致线程不安全。
+15. SimpleDateFormat为什么是线程不安全的？
+- 其内部实现拥有可变状态

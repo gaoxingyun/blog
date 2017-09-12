@@ -47,3 +47,17 @@ if(!...){
 String str = s==null ? "":s;
 ```
 
+#### 异常
+
+- 方法中的异常统一转换为uncheckd exception
+```
+// check异常转为uncheck异常
+try{
+    ;
+}catch(Exception e)
+{
+    throw new RuntimeException(e);
+}
+
+```
+
