@@ -93,3 +93,6 @@ Inspect
 - 自动补全快捷键
 进入 Preferences -> KeyMap -> Main menu –> Code –> Completion -> Basic，改为自己想要的快捷键即可。
 
+###### 问题
+[Intellij IDEA 使用Spring-boot-devTools无效解决办法](http://www.cnblogs.com/zhangjianbin/p/6438974.html)
+
