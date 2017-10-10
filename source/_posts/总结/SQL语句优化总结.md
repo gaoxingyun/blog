@@ -14,6 +14,14 @@ tags:
 - [https://yq.aliyun.com/articles/183749?spm=5176.100239.bloglist.157.m7bEPS](https://yq.aliyun.com/articles/183749?spm=5176.100239.bloglist.157.m7bEPS)
 - [http://blog.csdn.net/xifeijian/article/details/19773795](http://blog.csdn.net/xifeijian/article/details/19773795)
 
+#### explain
+[http://blog.csdn.net/xiaolyuh123/article/details/53116168](http://blog.csdn.net/xiaolyuh123/article/details/53116168)
+
+
+#### 联合查询驱动表
+
+- 小结果集驱动大结果集
+
 
 #### mysql临时表
 [http://blog.csdn.net/xiaolyuh123/article/details/53286033](http://blog.csdn.net/xiaolyuh123/article/details/53286033)
