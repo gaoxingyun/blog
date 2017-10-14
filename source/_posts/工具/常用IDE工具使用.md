@@ -86,6 +86,15 @@ Inspect
 
 ### idea使用
 
+#### idea激活
+
+- 使用docker部署idea license server
+- 使用idea license server 激活idea
+```
+http://www.ggstar.top:11017
+```
+
+
 #### 快捷键
 
 ##### 快捷键修改
