@@ -13,7 +13,10 @@ tags:
 
 #### 插件
 
-######
+###### 阿里编码规范
+- [https://github.com/alibaba/p3c](https://github.com/alibaba/p3c)
+
+###### 测试覆盖率
 - EclEmma 测试覆盖率插件，基于JaCoCo。
 
 
@@ -103,5 +106,6 @@ http://www.ggstar.top:11017
 进入 Preferences -> KeyMap -> Main menu –> Code –> Completion -> Basic，改为自己想要的快捷键即可。
 
 ###### 问题
-[Intellij IDEA 使用Spring-boot-devTools无效解决办法](http://www.cnblogs.com/zhangjianbin/p/6438974.html)
+- [Intellij IDEA 使用Spring-boot-devTools无效解决办法](http://www.cnblogs.com/zhangjianbin/p/6438974.html)
+- idea控制台中文乱码   vm参数添加 -Dfile.encoding=UTF-8
 
