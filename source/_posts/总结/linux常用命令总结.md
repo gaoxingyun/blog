@@ -332,3 +332,10 @@ awk -F ':' '{printf $1}'
 # 根据端口号获得进程号
 netstat -tlnp | grep 9999 | awk '{printf $7}' | awk -F '/' '{printf $1}'
 ```
+
+#### wc
+
+```
+# 统计行数
+wc -l 
+```

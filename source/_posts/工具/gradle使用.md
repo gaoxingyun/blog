@@ -9,5 +9,10 @@ tags:
 
 ##
 
+#### gradle命令
 
+- gradle build -i 构建，有详细过程日志
+
+
+####
 - compile('org.apache.httpcomponents:httpclient:+') 版本‘+’表示拉取最新版本，但是每次构建都会检查最新版本，会使构建变慢。

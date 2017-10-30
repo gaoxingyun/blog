@@ -47,6 +47,16 @@ if(!...){
 String str = s==null ? "":s;
 ```
 
+- 不要命名转瞬即逝的中间变量[Point Free代码风格](http://www.ruanyifeng.com/blog/2017/03/pointfree.html)
+
+``` kotlin
+var ret = "test";
+return ret;
+```
+
+
+
+
 #### 异常
 
 - 方法中的异常统一转换为uncheckd exception
