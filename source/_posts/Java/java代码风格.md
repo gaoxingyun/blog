@@ -71,3 +71,12 @@ try{
 
 ```
 
+
+#### 预编译
+
+- 使用正则表达式时，使用其预编译功能，可以加快正则匹配速度
+```
+// 将正则表达式设置为静态属性
+private final static Pattern pattern = Pattern.compile("([A-Za-z\\d]+)(_)?");
+
+```
