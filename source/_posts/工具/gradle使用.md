@@ -16,3 +16,8 @@ tags:
 
 ####
 - compile('org.apache.httpcomponents:httpclient:+') 版本‘+’表示拉取最新版本，但是每次构建都会检查最新版本，会使构建变慢。
+
+
+
+#### gradle插件
+- [shadow](https://github.com/johnrengelman/shadow)
