@@ -21,3 +21,7 @@ tags:
 
 #### gradle插件
 - [shadow](https://github.com/johnrengelman/shadow)
+
+
+#### gradle阿里云maven仓库
+- maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
