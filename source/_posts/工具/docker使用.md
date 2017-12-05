@@ -82,6 +82,14 @@ CMD ["java","-jar","app.jar"]
 3. 运行镜像
 `docker run -d --name app -p 8080:8080 xy/app`
 
+#### docker管理工具
+
+###### Kitematic
+- 功能：Docker GUI工具，可以方便通过GUI管理docker容器。
+
+###### Swarm
+- 功能：管理docker集群，将多台机器的docker服务统一进行管理。
+
 # docker安装常用服务
 
 ## docker安装mysql数据库
@@ -241,3 +249,18 @@ input {
 [https://www.elastic.co/guide/en/logstash/current/plugins-codecs-plain.html](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-plain.html)
 [http://logging.apache.org/log4j/2.x/manual/appenders.html#SocketAppender](http://logging.apache.org/log4j/2.x/manual/appenders.html#SocketAppender)
 [http://kibana.logstash.es/content/kibana/index.html](http://kibana.logstash.es/content/kibana/index.html)
+
+
+## docker安装nexus私有仓库
+
+### 安装
+```shell
+# 数据容器
+docker run -d --name nexus-data sonatype/nexus echo “data-only container for Nexus”;
+# 服务
+docker run -d -p 10081:8081 --name nexus --volumes-from nexus-data sonatype/nexus;
+```
+
+### 使用
+- 登陆http://localhost:10081
+
