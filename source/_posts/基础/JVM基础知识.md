@@ -115,5 +115,3 @@ tags:
 ### JVM运行期优化
 
 
-### 博客
-[Java代码优化](https://www.cnblogs.com/xrq730/p/4865416.html)
