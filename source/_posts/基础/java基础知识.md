@@ -239,17 +239,88 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
 
 - Java通过Executors提供以下四种线程池
 
-##### newCachedThreadPool
+##### 线程池类型
+
+###### newCachedThreadPool
 - 创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
 
-##### newFixedThreadPool
+###### newFixedThreadPool
 - 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。
 
-##### newScheduledThreadPool
+###### newScheduledThreadPool
 - 创建一个定长线程池，支持定时及周期性任务执行。
 
-##### newSingleThreadExecutor
+###### newSingleThreadExecutor
 - 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+
+##### 线程池参数
+
+```java
+ /**
+     * Creates a new {@code ThreadPoolExecutor} with the given initial
+     * parameters.
+     *
+     * @param corePoolSize the number of threads to keep in the pool, even
+     *        if they are idle, unless {@code allowCoreThreadTimeOut} is set
+     * @param maximumPoolSize the maximum number of threads to allow in the
+     *        pool
+     * @param keepAliveTime when the number of threads is greater than
+     *        the core, this is the maximum time that excess idle threads
+     *        will wait for new tasks before terminating.
+     * @param unit the time unit for the {@code keepAliveTime} argument
+     * @param workQueue the queue to use for holding tasks before they are
+     *        executed.  This queue will hold only the {@code Runnable}
+     *        tasks submitted by the {@code execute} method.
+     * @param threadFactory the factory to use when the executor
+     *        creates a new thread
+     * @param handler the handler to use when execution is blocked
+     *        because the thread bounds and queue capacities are reached
+     * @throws IllegalArgumentException if one of the following holds:<br>
+     *         {@code corePoolSize < 0}<br>
+     *         {@code keepAliveTime < 0}<br>
+     *         {@code maximumPoolSize <= 0}<br>
+     *         {@code maximumPoolSize < corePoolSize}
+     * @throws NullPointerException if {@code workQueue}
+     *         or {@code threadFactory} or {@code handler} is null
+     */
+    public ThreadPoolExecutor(int corePoolSize,
+                              int maximumPoolSize,
+                              long keepAliveTime,
+                              TimeUnit unit,
+                              BlockingQueue<Runnable> workQueue,
+                              ThreadFactory threadFactory,
+                              RejectedExecutionHandler handler) {
+        if (corePoolSize < 0 ||
+            maximumPoolSize <= 0 ||
+            maximumPoolSize < corePoolSize ||
+            keepAliveTime < 0)
+            throw new IllegalArgumentException();
+        if (workQueue == null || threadFactory == null || handler == null)
+            throw new NullPointerException();
+        this.corePoolSize = corePoolSize;
+        this.maximumPoolSize = maximumPoolSize;
+        this.workQueue = workQueue;
+        this.keepAliveTime = unit.toNanos(keepAliveTime);
+        this.threadFactory = threadFactory;
+        this.handler = handler;
+    }
+```
+##### 线程池参数详解
+- int corePoolSize 核心线程数量
+- int maximumPoolSize 最大线程数量
+- long keepAliveTime 非核心线程保持时间，超出时间，销毁线程
+- TimeUnit unit keepAliveTime时间单位
+- BlockingQueue<Runnable> workQueue 工作阻塞队列，处理不了的任务，先放到工作队列中，可创建多种阻塞队列
+- ThreadFactory threadFactory 现程创建工厂
+- RejectedExecutionHandler handler 拒绝处理器，有多种拒绝策略
+
+###### RejectedExecutionHandler拒绝处理器
+
+- CallerRunsPolicy 直接运行这个任务的run方法。但是，请注意并不是在ThreadPoolExecutor线程池中的线程中运行，而是直接调用这个任务实现的run方法
+- AbortPolicy 在任务被拒绝后会创建一个RejectedExecutionException异常并抛出。这个处理过程也是ThreadPoolExecutor线程池默认的RejectedExecutionHandler实现
+- DiscardPolicy 将会默默丢弃这个被拒绝的任务，不会抛出异常，也不会通过其他方式执行这个任务的任何一个方法，更不会出现任何的日志提示
+- DiscardOldestPolicy 会检查当前ThreadPoolExecutor线程池的等待队列。并调用队列的poll()方法，将当前处于等待队列列头的等待任务强行取出，然后再试图将当前被拒绝的任务提交到线程池执行
+
 
 
 #### 多线程特点
