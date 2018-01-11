@@ -16,8 +16,10 @@ tags:
 
 ###### 常用库
 
-- [rxJava](https://github.com/ReactiveX/RxJava)
+- [rxJava](https://github.com/ReactiveX/RxJava) 安卓上流行
+- [projectreactor](https://github.com/reactor/reactor-core) spring默认实现
 - [vert.x](http://vertx.io/)
+
 
 
 ###### 名词

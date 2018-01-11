@@ -22,8 +22,12 @@ tags:
 ### 异步actor模型
 - akka[https://github.com/akka/akka](https://github.com/akka/akka)
 - Vert.x[https://github.com/eclipse/vert.x](https://github.com/eclipse/vert.x)
+- ProjectReactor[https://github.com/reactor/projectreactor.io](https://github.com/reactor/projectreactor.io)
+- ReactorX(RxJava)[https://github.com/jbrodriguez/reactorx](https://github.com/jbrodriguez/reactorx)
 
 #### io
 - netty[https://github.com/netty/netty](https://github.com/netty/netty)
 - mina[https://github.com/apache/mina](https://github.com/apache/mina)
 
+#### 工具
+- lombok[https://github.com/rzwitserloot/lombok](https://github.com/rzwitserloot/lombok)
