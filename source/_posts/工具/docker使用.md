@@ -257,7 +257,6 @@ input {
 [http://logging.apache.org/log4j/2.x/manual/appenders.html#SocketAppender](http://logging.apache.org/log4j/2.x/manual/appenders.html#SocketAppender)
 [http://kibana.logstash.es/content/kibana/index.html](http://kibana.logstash.es/content/kibana/index.html)
 
-
 ## docker安装nexus私有仓库
 
 ### 安装
