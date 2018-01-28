@@ -109,10 +109,89 @@ ArraryList list = new ArraryList<String>(); // 无效果，因为类型检查是
 
 #### Java注解
 
-##### JavaApi自带注解
+##### 分类
+
+###### 根据注解使用方法和用途分类
+- JDK 内置系统注解
+- 元注解 用来修饰注解的注解
+- 自定义注解
+
+##### JDK内置系统注解
+
+###### 重写方法
+- @Override
+
+###### 标记过时
+- @Deprecated
 
 ###### 忽略警告
 - @SuppressWarnings
+
+##### 元注解
+- 元注解的作用就是用来注解其它注解，主要有四种元注解
+
+###### @Target
+- 注明了注解修饰的对象的类型，取值（枚举类型 ElementType）有：
+  - CONSTRUCTOR: 修饰构造器
+  - FIELD:修饰域
+  - LOCAL_VARIABLE:修饰局部变量
+  - METHOD:修饰方法
+  - PACKAGE:修饰包
+  - PARAMETER:修饰参数
+  - TYPE:修饰类、接口(包括注解类型) 或enum声明
+
+###### @Retention
+- 定义了该Annotation被保留的时间长短，取值（RetentionPoicy）有：
+  - SOURCE: 源文件有效
+  - CLASS: class文件中有效
+  - RUNTIME: 运行时有效
+
+
+###### @Documented
+- 用于描述其它类型的Annotation应该被作为被标注的程序成员的公共API
+
+###### @Inherited
+- 阐述了某个被标注的类型是被继承的。如果一个使用了 @Inherited 修饰的annotation类型被用于一个class，则这个annotation将被用于该class的子类。
+  - 注意：@Inherited annotation类型是被标注过的class的子类所继承。类并不从它所实现的接口继承annotation，方法并不从它所重载的方法继承annotation。
+    1. 如果子类继承父类，并且重写了父类中的带有注解的方法，那么父类方法上的注解是不会被子类继承的。
+    2. 如果子类继承父类，但是没有重写父类中带有注解的方法，那么父类方法上的注解会被子类继承，就是说在子类中可以得到父类方法上的注解。
+  - 即使在注解中没有 @Inherited 也会满足上面情况，但是如果该注解是用来修饰类的，则不满足。
+
+
+##### 自定义注解
+
+###### 定义注解格式
+- public @interface 注解名 {定义体}
+
+###### 注解参数的可支持数据类型
+- 所有基本数据类型（int,float,boolean,byte,double,char,long,short)
+- String类型
+- Class类型
+- enum类型
+- Annotation类型
+- 以上所有类型的数组
+
+###### 其他约束
+- 对于注解中的参数，只能用public或默认(default)这两个访问权修饰.例如,String value();如果只有一个参数成员,最好把参数名称设为"value"
+- 注解元素必须有确定的值，要么在定义注解的默认值中指定，要么在使用注解时指定，非基本类型的注解元素的值不可为null。
+
+###### 解析注解
+```java
+
+// 定义注解
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface Annonation{
+    String value() default "defalut value";
+}
+// 使用注解
+@Annonation("my annonation")
+class  MyClass{}
+// 解析注解
+Class c = Class.forName("");
+Annonation annonation = (Annonation)c.getAnnotation(Annonation.class);
+System.out.println(annonation.value());
+```
 
 
 #### Java特性
