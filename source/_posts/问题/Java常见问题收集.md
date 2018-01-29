@@ -44,3 +44,5 @@ tags:
 - 其内部实现拥有可变状态
 16. Java查询数据库拼接sql时常加上条件where 1=1，有什么作用？
 - 加上where 1=1当语句没有任何条件时不会报错，否则没有任何条件时语句将变成类似 select * from table where; 这种语句，加where 1=1 主要为了简化拼sql操作，不用另外去判断是否需要where关键字了。
+17. Runable和Callable的区别？
+- 两者都是接口，都能创建一个线程，但Callable可用通过Feture获得线程的返回值。在需要获得线程执行结果的场景中是呀Callable。
