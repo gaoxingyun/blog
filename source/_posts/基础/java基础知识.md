@@ -304,6 +304,8 @@ System.out.println(annonation.value());
 
 1. 继承Thread方法
 2. 实现Runable接口
+3. 实现Callable接口，并通过Feture获得线程执行结果
+
 
 ###### 多线程方法
 

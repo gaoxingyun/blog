@@ -109,3 +109,10 @@ http://www.ggstar.top:11017
 - [Intellij IDEA 使用Spring-boot-devTools无效解决办法](http://blog.csdn.net/wjc475869/article/details/52442484)
 - idea控制台中文乱码   vm参数添加 -Dfile.encoding=UTF-8
 - idea导入gradle项目出错`Error:Failed to open zip file. Gradle's dependency cache may be corrupt`,修改gradle-wrapper.properties里的gradle的版本[http://blog.csdn.net/qq_31001287/article/details/54629570](http://blog.csdn.net/qq_31001287/article/details/54629570)
+
+### Atom工具使用
+
+#### 插件
+
+- 代码跳转 hyperclick + goto-definition
+
