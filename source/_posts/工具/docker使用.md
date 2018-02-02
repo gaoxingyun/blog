@@ -19,6 +19,10 @@ tags:
 #### 参考资料
 [https://www.docker.com](https://www.docker.com)
 
+## docker启动
+
+- `sudo systemctl start docker`
+
 ## docker命令
 
 #### 启动容器
