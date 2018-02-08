@@ -9,12 +9,49 @@ tags:
 ---
 
 
-####
+#### 添加jar包到maven本地仓库
 
 - 添加jar包到maven本地仓库
 ```
 mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=9.0.2.0.0 -Dpackaging=jar -Dfile=ojdbc14.jar
 ```
+
+
+#### 发布项目到私有仓库
+
+1. 在项目Pom.xml中<project></project>之间加入
+```xml
+<distributionManagement>
+    <repository>
+        <id>releases</id>
+        <name>Popocloud Release Repository</name>
+        <url>http://maven:8081/nexus/content/repositories/releases/</url>
+     </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>Popocloud Snapshot Repository</name>
+        <url>http://maven:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+```
+
+2. 确保maven.setting.xml中加入了私有仓库用户名和密码
+```xml
+<server>  
+   <id>releases</id>  
+   <username>admin</username>  
+   <password>admin123</password>  
+ </server>  
+ 
+ <server>
+      <id>snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+  </server>
+</servers>
+```
+
+3. 对项目执行maven deploy命令，可实现将项目发布的maven私有仓库供其他开发人员使用。
 
 
 #### 问题

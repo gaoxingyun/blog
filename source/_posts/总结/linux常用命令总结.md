@@ -379,9 +379,55 @@ traceroute[参数][主机]
 
 ###### pstree
 
-- 查看进程树
+- `pstree`查看进程树
+- `pstree -p  $PID` 查看某进程ID的线程信息 
 
 ###### df
 
 - 查看磁盘空间
 
+###### du
+
+- `du -ach *` 查看当前目录下的所有文件占用磁盘大小和总大小
+- `du -sh` 查看当前目录的占用空间大小
+- `du -sh *` 查看所有子目录大小
+
+###### lsof
+
+- 查看系统所有打开的文件，由于linux一切皆文件的思想，可以查看很多系统状态
+```
+[root@localhost ~]# lsof -h
+lsof 4.78
+ latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+ latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+ latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
+ usage: [-?abhlnNoOPRstUvVX] [+|-c c] [+|-d s] [+D D] [+|-f[gG]] [+|-e s]
+ [-F [f]] [-g [s]] [-i [i]] [+|-L [l]] [+m [m]] [+|-M] [-o [o]]
+ [-p s] [+|-r [t]] [-S [t]] [-T [t]] [-u s] [+|-w] [-x [fl]] [-Z [Z]] [--] [names]
+Defaults in parentheses; comma-separated set (s) items; dash-separated ranges.
+  -?|-h list help          -a AND selections (OR)     -b avoid kernel blocks
+  -c c  cmd c, /c/[bix]    +c w  COMMAND width (9)     
+  +d s  dir s files        -d s  select by FD set     +D D  dir D tree *SLOW?*
+                           +|-e s  exempt s *RISKY*   -i select IPv[46] files
+  -l list UID numbers      -n no host names           -N select NFS files
+  -o list file offset      -O avoid overhead *RISKY*  -P no port names
+  -R list paRent PID       -s list file size          -t terse listing
+  -T disable TCP/TPI info  -U select Unix socket      -v list version info
+  -V verbose search        +|-w  Warnings (+)         -X skip TCP&UDP files
+  -Z Z  context [Z]
+  -- end option scan
+  +f|-f  +filesystem or -file names     +|-f[gG] flaGs 
+  -F [f] select fields; -F? for help  
+  +|-L [l] list (+) suppress (-) link counts < l (0 = all; default = 0)
+                                        +m [m] use|create mount supplement
+  +|-M   portMap registration (-)       -o o   o 0t offset digits (8)
+  -p s   exclude(^)|select PIDs         -S [t] t second stat timeout (15)
+  -T qs TCP/TPI Q,St (s) info
+  -g [s] exclude(^)|select and print process group IDs
+  -i i   select by IPv[46] address: [46][proto][@host|addr][:svc_list|port_list]
+  +|-r [t] repeat every t seconds (15); + until no files, - forever
+  -u s   exclude(^)|select login|UID set s
+  -x [fl] cross over +d|+D File systems or symbolic Links
+  names  select named files or files on named file systems
+Anyone can list all files; /dev warnings disabled; kernel ID check disabled.
+```
