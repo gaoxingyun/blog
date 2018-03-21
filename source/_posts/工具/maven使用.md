@@ -16,6 +16,13 @@ tags:
 mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=9.0.2.0.0 -Dpackaging=jar -Dfile=ojdbc14.jar
 ```
 
+#### 跳过单元测试
+
+- 
+```
+mvn package -Dmaven.test.skip=true
+```
+
 
 #### 发布项目到私有仓库
 
@@ -52,7 +59,11 @@ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=9.0
 ```
 
 3. 对项目执行maven deploy命令，可实现将项目发布的maven私有仓库供其他开发人员使用。
+```
+mvn deploy:deploy-file -Dmaven.test.skip=true -Dfile=alipay-sdk-java20151021120052-1.0.jar -DgroupId=alipay -DartifactId=alipay-sdk-java20151021120052 -Dversion=1.0 -Dpackaging=jar -DrepositoryId=nexus-thirdparty -Durl=http://192.168.13.145:10081/nexus/content/repositories/thirdparty/
 
+
+```
 
 #### 问题
 

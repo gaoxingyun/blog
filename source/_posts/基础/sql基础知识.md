@@ -53,6 +53,43 @@ sql一直都很差，平时工作中又使用各种ORM框架，很少写sql，�
 ##### 常用函数示例
 - `CAST(1.234 AS DECIMAL(10,2))` 保留精度位函数，例子保留两位小数，包括小数共十位数。
 
+#### 控制语句
+
+##### CASE
+
+###### 简单CASE语句
+
+```sql
+CASE sex
+WHEN '1' THEN '男'
+WHEN '2' THEN '女'
+ELSE '其他' END
+```
+
+###### CASE搜索语句
+
+```sql
+CASE WHEN sex = '1' THEN '男' 
+WHEN sex = '2' THEN '女' 
+ELSE '其他' END 
+```
+
+###### CASE语句示例
+
+- 统计数量
+```sql
+-- CASE结合SUM统计数量
+-- 统计年龄分组男性数量和女性数量
+SELECT 
+-- 男性
+SUM(CASE WHEN sex = '1' THEN 1
+ELSE 0 END,)
+-- 女性
+SUM(CASE WHEN sex = '0' THEN 1
+ELSE 0 END)
+GROUP BY age;
+```
+
 ##### 关键字执行顺序
 
 FROM -> ON -> JOIN -> WHERE -> SELECT -> GROUP BY -> HAVING -> ORDER BY

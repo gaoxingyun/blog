@@ -56,6 +56,30 @@ tags:
 > -p 映射端口，主机端口:容器端口
 > -v 映射目录，主机目录:容器目录，将主机目录挂载到容器目录上
 
+
+## docker-compose命令
+
+#### 创建或再建服务
+- `docker-compose build`
+
+#### 帮助
+- `docker-compose help`
+
+#### 显示服务的日志输出
+- `docker-compose logs <容器名／容器ID> ` 
+
+#### 显示容器
+- `docker-compose ps`
+
+#### 设置为一个服务启动的容器数量
+- `docker-compose scale <服务名=数量>` 
+
+#### 为一个服务构建、创建、启动、附加到容器 
+- `docker-compose up`
+- `docker-compose up -d` 后台启动
+
+
+
 ## Dockerfile编写
 
 #### Dockerfile命令

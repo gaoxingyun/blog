@@ -25,26 +25,26 @@ tags:
 
 ## 新建数据库
 1. 首先，创建（新）用户：
-        create user username identified by password;
+        `create user username identified by password;`
         username：新用户名的用户名
         password: 新用户的密码
         也可以不创建新用户，而仍然用以前的用户，如：继续利用scott用户
 2. 创建表空间：
-         create tablespace tablespacename datafile 'd:\data.dbf' size xxxm;
+         `create tablespace tablespacename datafile 'd:\data.dbf' size xxxm;`
          tablespacename：表空间的名字
          d:\data.dbf'：表空间的存储位置
          xxx表空间的大小，m单位为兆(M)
 3. 将空间分配给用户：
-        alter user username default tablespace tablespacename;
+        `alter user username default tablespace tablespacename;`
         将名字为tablespacename的表空间分配给username 
 4. 给用户授权：
-        grant create session,create sequence,create table,unlimited tablespace to username;
+        `grant create session,create sequence,create table,unlimited tablespace to username;`
 5. 然后再以自己创建的用户登录，登录之后创建表即可。
-        conn username/password;
+        `conn username/password;`
 
 ## 删除用户
 - 删除用户和其数据，cascade表示删除数据，需此用户无连接。
-        drop user username cascade;
+        `drop user username cascade;`
 
 
 ## ORACLE数据库问题
@@ -55,7 +55,7 @@ tags:
 
 ##### 问题解决
 - 查询dba_mview_logs中存在，而的log表不存在的对象
-select 'drop materialized view log on '||mvl.log_owner||'.'||mvl.master||';' cmd from dba_mview_logs mvl where not exists ( select table_name from dba_tables tab where tab.owner = mvl.log_owner and tab.table_name = mvl.log_table ) ;
+`select 'drop materialized view log on '||mvl.log_owner||'.'||mvl.master||';' cmd from dba_mview_logs mvl where not exists ( select table_name from dba_tables tab where tab.owner = mvl.log_owner and tab.table_name = mvl.log_table ) ;`
 直接执行查询得到结果即可正确删除物化视图日志，解决问题。
 
 参考[http://blog.itpub.net/27000195/viewspace-1400038](http://blog.itpub.net/27000195/viewspace-1400038)

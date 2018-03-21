@@ -78,6 +78,9 @@ tags:
 #### git gui
 > git gui 基于Tcl/Tk的图形化工具，侧重提交等操作
 
+#### git remote
+> git remote update origin --prune  更新远程分支列表
+
 ## git区
 
 #### 工作区
