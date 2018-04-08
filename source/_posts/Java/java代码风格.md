@@ -18,6 +18,7 @@ tags:
 #### 属性
 - 属性使用名词
 
+
 ## 约定
 
 对外的参数使用包装类型，内部参数使用基本类型
@@ -80,3 +81,69 @@ try{
 private final static Pattern pattern = Pattern.compile("([A-Za-z\\d]+)(_)?");
 
 ```
+
+## 常用命令
+
+### 包
+
+- model 实体
+- entity 实体
+- service 服务
+- util 工具
+- validator 校验
+
+
+### 接口
+
+- I 接口开头
+
+
+
+### 类
+
+- Impl 实现类结尾 
+
+
+#### 领域模型
+
+- POJP 简单JAVA对象
+- VO value object 值对象
+- BO business object 业务对象
+- PO persistant object 持久对象
+- DAO data access object 数据访问对象
+
+- CO Client Object 客户端交互对象 API交互对象
+- DO Data Object 数据对象
+
+
+### 方法
+
+### 变量
+
+### 枚举
+
+### 设计模式
+
+- Singleton 单件
+- Abstract Factory 抽象工厂模式
+- Builder 生成器模式
+- Factory Method 工厂方法模式
+- Prototype 原型模式
+- Adapter 适配器模式
+- Bridge 桥接模式
+- Composite 组合模式
+- Decorator 装饰模式
+- Facade 门面模式
+- Flyweight 享元模式
+- Proxy 代理模式
+- Template Methed 模板方法
+- Command 命令模式
+- Interpreter 解释器模式
+- Mediator 中介者模式
+- Iterator 迭代器模式
+- Observer 观察者模式
+- Chain Of Responsibility 责任链模式
+- Memento 备忘录模式
+- State 状态模式
+- Strategy 策略模式
+- Visitor 访问者模式

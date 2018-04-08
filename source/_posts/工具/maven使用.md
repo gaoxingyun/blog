@@ -68,3 +68,9 @@ mvn deploy:deploy-file -Dmaven.test.skip=true -Dfile=alipay-sdk-java201510211200
 #### 问题
 
 - eclipse中的maven web项目报错：org/codehaus/plexus/archiver/jar/JarArchiver[http://blog.csdn.net/lele2426/article/details/38963071](http://blog.csdn.net/lele2426/article/details/38963071)
+
+#### 名词
+
+- 一方库：本工程中的各模块的相互依赖
+- 二方库：公司内部的依赖库，一般指公司内部的其他项目发布的jar包
+- 三方库：公司之外的开源库， 比如apache、ibm、google等发布的依赖
