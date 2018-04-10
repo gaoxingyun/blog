@@ -14,7 +14,12 @@ tags:
 #### 插件
 
 ###### 阿里编码规范
+
 - [https://github.com/alibaba/p3c](https://github.com/alibaba/p3c)
+
+######  Lombok
+
+- [Project Lombok](https://projectlombok.org)
 
 ###### 测试覆盖率
 - EclEmma 测试覆盖率插件，基于JaCoCo。
