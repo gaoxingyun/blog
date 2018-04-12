@@ -7,6 +7,8 @@ tags:
 - 工具
 ---
 
+
+
 ## 命令
 
 #### git add
@@ -187,3 +189,28 @@ git merge origin/master;
 ```
 git pull origin master;
 ```
+
+
+* 合并提交commit历史
+```
+git rebase -i 提交id;
+
+# 编辑提交历史 合并提交 
+# 不能修改第一个提交 会报错类似Cannot 'squash' without a previous commit
+
+git push;
+
+```
+
+* 强制推送本地分支到远程
+
+```
+git push origin $branch_name -f
+```
+
+
+
+
+
+## 博客
+- [廖雪峰博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000)
