@@ -12,6 +12,13 @@ tags:
 
 ## docker安装
 
+
+#### 安装
+
+- [docker官方安装](https://docs.docker.com/install/)
+- [国内源安装docker](https://yq.aliyun.com/articles/110806)
+
+
 #### docker安装
 1. 登录docker官网，下载docker安装包，安装
 2. Preferences -> File Sharing添加需共享的文件夹

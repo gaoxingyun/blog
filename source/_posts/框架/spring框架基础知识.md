@@ -10,6 +10,8 @@ tags:
 
 # Spring框架总结
 
+## 框架概况
+
 ###### spring优点
 
 - 轻量级：Spring在大小和透明性方面绝对属于轻量级的，基础版本的Spring框架大约只有2MB。
@@ -104,6 +106,7 @@ private UserService userService3;
 - @PostConstruct 初始化注解
 - @PreDestroy 摧毁注解 默认 单例  启动就加载
 - @Async异步方法调用
+
 
 #### spring data
 
@@ -221,5 +224,57 @@ spring:
     type: CAFFEINE
     caffeine:
       spec: maximumSize=500,expireAfterWrite=5s
+```
+
+## Spring MVC
+
+#### Spirng MVC 参数校验
+
+- spring中使用validation校验框架（hibernate实现，JSR303标准）,不仅可以对VO进行校验，同时可以对DO进行校验。
+
+###### 参数校验注解
+
+- Bean Validation 中内置的 constraint
+
+注解|运行时检查
+-|:-
+@Null	|被注释的元素必须为 null
+@NotNull	|被注释的元素必须不为 null
+@AssertTrue	|被注释的元素必须为 true
+@AssertFalse	|被注释的元素必须为 false
+@Min(value)	|被注释的元素必须是一个数字，其值必须大于等于指定的最小值
+@Max(value)	|被注释的元素必须是一个数字，其值必须小于等于指定的最大值
+@DecimalMin(value)	|被注释的元素必须是一个数字，其值必须大于等于指定的最小值
+@DecimalMax(value)	|被注释的元素必须是一个数字，其值必须小于等于指定的最大值
+@Size(max, min)	|被注释的元素的大小必须在指定的范围内
+@Digits (integer, fraction)	|被注释的元素必须是一个数字，其值必须在可接受的范围内
+@Past	|被注释的元素必须是一个过去的日期
+@Future	|被注释的元素必须是一个将来的日期
+@Pattern(value)	|被注释的元素必须符合指定的正则表达式
+
+
+- Hibernate Validator 附加的 constraint
+
+注解|运行时检查
+-|:-
+@Email	|被注释的元素必须是电子邮箱地址
+@Length	|被注释的字符串的大小必须在指定的范围内
+@NotEmpty	|被注释的字符串的必须非空
+@Range	|被注释的元素必须在合适的范围内
+
+###### 校验使用
+
+1. 通过注解进行校验
+```java
+
+
+```
+
+
+2. 通过代码进行校验
+
+```java
+    @Autowired
+    private Validator validator;
 ```
 
