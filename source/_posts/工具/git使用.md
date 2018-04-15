@@ -55,7 +55,8 @@ tags:
 > git reset --hard commit_id  回退到指定版本，并把工作区文件更新，可配合git reflog使用
 
 #### git merge
-> git merge --no-ff -m "合并标签" 需合并的分支       禁用Fast forward方式合并，此种方式合并可在分支历史看到合并分支的信息      
+> git merge --no-ff -m "合并标签" 需合并的分支   禁用Fast forward方式合并，此种方式合并可在分支历史看到合并分支的信息      
+> git merge -m "合并标签" 需合并的分支   如果可能，会使用Fast forward方式合并，此种方式在删除feature分支后丢失分支信息，但可以保持分支干净
 
 #### git rebase 分支变基
 > git rebase origin 让分支历史变为线性
@@ -76,6 +77,7 @@ tags:
 > git tag  标签名    打标签，默认标签打在最新提交的commit上。
 > git tag 标签名 提交id   打标签到指定的提交上
 > git tag -d 标签名      删除本地标签
+> git push origin --tags  推送所有未提交的标签到远程分支
 
 #### git gui
 > git gui 基于Tcl/Tk的图形化工具，侧重提交等操作
@@ -193,7 +195,7 @@ git pull origin master;
 
 * 合并提交commit历史
 ```
-git rebase -i 提交id;
+git rebase -i 提交ID;
 
 # 编辑提交历史 合并提交 
 # 不能修改第一个提交 会报错类似Cannot 'squash' without a previous commit
@@ -202,10 +204,38 @@ git push;
 
 ```
 
+* 合并之前的多个commit提交
+```
+# 回退版本库和暂存区内容，但工作区仍然是最新的内容，千万不要加--hard，否则工作区的代码也会回退，代码会丢失
+git reset a4959da;
+# 重新发起一次提交即可
+git add .;
+git commit -m "message";
+```
+
 * 强制推送本地分支到远程
 
 ```
-git push origin $branch_name -f
+git push origin 远程分支名 -f
+```
+
+* 强制远程分支覆盖本地
+```
+git fetch --all;
+git reset --hard origin/master;
+git pull;
+```
+
+
+* 回退到之前提交的一个版本
+```
+git reset --hard 提交ID
+```
+
+* 使提交历史在一条线上
+```
+# 在feature分支开发时，经常使用git rebase dev保持与dev同步代码，等feature开发完成后，切到dev分支，使用git merge feature，这时候merge是Fast-Forward，不会产生任何无用的commit。
+git rebase
 ```
 
 
