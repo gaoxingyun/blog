@@ -110,6 +110,12 @@ http://www.ggstar.top:11017
 - 自动补全快捷键
 进入 Preferences -> KeyMap -> Main menu –> Code –> Completion -> Basic，改为自己想要的快捷键即可。
 
+###### 插件
+
+- GsonFormat JSON串转对象
+
+
+
 ###### 问题
 - [Intellij IDEA 使用Spring-boot-devTools无效解决办法](http://blog.csdn.net/wjc475869/article/details/52442484)
 - idea控制台中文乱码   vm参数添加 -Dfile.encoding=UTF-8

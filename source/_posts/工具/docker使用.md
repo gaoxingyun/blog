@@ -64,6 +64,15 @@ tags:
 > -v 映射目录，主机目录:容器目录，将主机目录挂载到容器目录上
 
 
+#### docker安装程序
+
+```
+# 先更新源
+apt-get update;
+apt install vim;
+```
+
+
 ## docker-compose命令
 
 #### 创建或再建服务

@@ -11,6 +11,9 @@ tags:
 
 ## 命令
 
+#### git config
+> git config --global credential.helper store  储存密码，只需要输入一次密码，以后都不需要输入，免输入密码的另一种方式
+
 #### git add
 > git add + 文件／路径 添加文件到本地暂存区
 
@@ -45,6 +48,8 @@ tags:
 
 #### git clone
 > git clone + 仓库地址 克隆远程仓库代码到本地
+> git clone -b + 分支名 + 仓库地址 克隆远程仓库代码指定分支到本地
+
 
 #### git commit
 > git commit -m 提交标签   提交暂存区到本地版本库，此时暂存区清空
@@ -238,6 +243,17 @@ git reset --hard 提交ID
 git rebase
 ```
 
+* 提交dev后后悔，想修改线上记录
+```
+git checkout dev;
+git pull;
+git checkout feature;
+git rebase -i $commitId;
+# 利用rebase修改到自己想要的记录后
+git checkout dev;
+git rebase feature;
+git push;
+```
 
 
 
