@@ -6,14 +6,16 @@ branches:
 #   directories:
 #   - node_modules
 before_install:
+- nvm install v10.0.0
+- nvm use v10.0.0
+- node -v
+- npm -v
 - openssl aes-256-cbc -K $encrypted_8684fc738fed_key -iv $encrypted_8684fc738fed_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 
 before_script:
-- nvm use v10.0.0
-- node -v
-- npm -v
+
 
 # 免密码登陆ssh
 - eval $(ssh-agent)
