@@ -11,10 +11,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 
 before_script:
-- rm -rf node_modules/
-- npm install -g npm
-- npm install -g n
-- n latest
+- nvm use v10.0.0
 - node -v
 - npm -v
 
