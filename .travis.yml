@@ -11,6 +11,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 
 before_script:
+- rm -rf node_modules/
 
 # 免密码登陆ssh
 - eval $(ssh-agent)
