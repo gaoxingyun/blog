@@ -12,6 +12,11 @@ before_install:
 
 before_script:
 - rm -rf node_modules/
+- npm install -g npm
+- npm install -g n
+- n latest
+- node -v
+- npm -v
 
 # 免密码登陆ssh
 - eval $(ssh-agent)
