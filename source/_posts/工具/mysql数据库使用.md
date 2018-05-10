@@ -13,7 +13,7 @@ tags:
 
 #### 常用命令
 
-- `mysql -h127.0.0.1 -p3306 -uuser -p123456` 登陆
+- `mysql -h127.0.0.1 -P3306 -uuser -p123456` 登陆
 - `show databases;` 查看库
 - `use mydb;` 使用mydb库
 - `show tables;` 查看表
@@ -53,3 +53,54 @@ mysql> DELIMITER ;
 ```
 
 
+#### mysql主从配置
+
+###### master
+- 配置
+```
+# 日志文件名  
+log-bin = mysql-bin  
+  
+# 主数据库端ID号  
+server-id = 1
+```
+
+- 命令
+```
+mysql>grant replication slave on *.* to 'slave_account'@'%' identified by '123456';  
+  
+# 更新数据库权限  
+mysql>flush privileges;
+
+# 查看master状态，slave命令需用到
+mysql> show master status;  
+```
+
+###### slave
+
+- 配置
+
+```
+# 从数据库端ID号  
+server-id =2 
+```
+
+
+
+- 命令
+
+```
+# 执行同步命令，设置主数据库ip，同步帐号密码，同步位置  
+mysql>change master to master_host='192.168.1.2',master_user='slave_account',master_password='123456',master_log_file='mysql-bin.000009',master_log_pos=196;  
+  
+# 开启同步功能  
+mysql>start slave; 
+
+# 检查从数据库状态
+show slave status\G;  
+
+# Slave_IO_Running及Slave_SQL_Running进程必须正常运行，即YES状态，否则说明同步失败。
+```
+
+
+- [https://blog.csdn.net/mycwq/article/details/17136001](https://blog.csdn.net/mycwq/article/details/17136001)
