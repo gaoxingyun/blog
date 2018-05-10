@@ -39,7 +39,7 @@ schema.xml配置
                           writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
                 <heartbeat>select user()</heartbeat>
 
-<!-- writeHost和readHost对应实体数据库连接的配置，以下配置是一个简单的读写分离 -->                
+<!-- writeHost和readHost对应实体数据库连接的配置，以下配置是一个简单的读写分离, 数据库的主从配置需数据库自行配置 -->                
                 <writeHost host="hostM1" url="localhost:3306" user="root"
                                    password="123456">
                         <readHost host="hostS2" url="localhost:13306" user="root" password="123456" />
