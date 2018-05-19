@@ -20,3 +20,10 @@ tags:
 ```sql
 update user set name='admin', version=version+1 where id='1' and version=1;
 ```
+
+
+
+## 问题
+
+- 报错  org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.builder.xml.IncompleteStatementException: Could not find parameter map java.util.Map  
+解决：搜索文件*.xml 搜索词: parameterMap 然后将parameterMap 改为parameterType

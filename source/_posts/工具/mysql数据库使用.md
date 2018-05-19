@@ -104,3 +104,19 @@ show slave status\G;
 
 
 - [https://blog.csdn.net/mycwq/article/details/17136001](https://blog.csdn.net/mycwq/article/details/17136001)
+
+
+
+## 问题
+
+- mysql关于错误InnoDB is limited to row-logging when transaction isolation level is READ COMMITTED or READ UNCOMMITTED.
+暂时解决问题方法：
+mysql> 
+SET GLOBAL binlog_format = 'STATEMENT';
+mysql> 
+SET GLOBAL binlog_format = 'ROW';
+mysql> 
+SET GLOBAL binlog_format = 'MIXED';
+永久解决问题方式：
+在mysql的配置文件中，找到binlog_format=mixed，把前边的#去掉。
+重启mysql服务！

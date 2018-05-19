@@ -11,6 +11,8 @@ tags:
 
 ## nginx使用
 
+- [http://nginx.org/](http://nginx.org/)
+
 #### nginx安装
 
 - [http://www.cnblogs.com/taiyonghai/p/6728707.html](http://www.cnblogs.com/taiyonghai/p/6728707.html)
@@ -178,4 +180,20 @@ location  /html {
 
 #### 问题
 
-- 
+- nginx重试机制导致前端发送一次支付请求，后端收到两次支付请求，请求重复提交，客户重复支付的问题。
+```
+Syntax:	proxy_next_upstream error | timeout | invalid_header | http_500 | http_502 | http_503 | http_504 | http_403 | http_404 | http_429 | non_idempotent | off ...;
+Default:	
+proxy_next_upstream error timeout;
+Context:	http, server, location
+```
+默认情况下，后端服务超时，nginx会发送请求到下一个服务，对于无幂等性的服务，会造成服务的异常情况，所以对于支付等服务，要设置proxy_next_upstream off
+```
+Syntax:	proxy_read_timeout time;
+Default:	
+proxy_read_timeout 60s;
+Context:	http, server, location
+```
+proxy_read_timeout，代理超时时间，默认为60s。
+
+[http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_next_upstream](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_next_upstream)

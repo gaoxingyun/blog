@@ -99,7 +99,7 @@ Inspect
 - 使用docker部署idea license server
 - 使用idea license server 激活idea
 ```
-http://www.ggstar.top:11017
+http://aliyun.ustar.pub:11017
 ```
 
 
@@ -113,6 +113,8 @@ http://www.ggstar.top:11017
 ###### 插件
 
 - GsonFormat JSON串转对象
+- [google-java-format](https://github.com/google/google-java-format)
+
 
 
 
