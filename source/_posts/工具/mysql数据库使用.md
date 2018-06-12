@@ -120,3 +120,12 @@ SET GLOBAL binlog_format = 'MIXED';
 永久解决问题方式：
 在mysql的配置文件中，找到binlog_format=mixed，把前边的#去掉。
 重启mysql服务！
+
+
+- 设置最大连接数
+```
+# 设置全局最大连接数
+set GLOBAL max_connections=200;
+# 查看连接数
+show processlist;
+```
