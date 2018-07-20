@@ -99,7 +99,7 @@ Inspect
 - 使用docker部署idea license server
 - 使用idea license server 激活idea
 ```
-http://aliyun.ustar.pub:11017
+http://idea.ustar.pub
 ```
 
 

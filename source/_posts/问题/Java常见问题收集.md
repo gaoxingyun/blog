@@ -46,3 +46,10 @@ tags:
 - 加上where 1=1当语句没有任何条件时不会报错，否则没有任何条件时语句将变成类似 select * from table where; 这种语句，加where 1=1 主要为了简化拼sql操作，不用另外去判断是否需要where关键字了。
 17. Runable和Callable的区别？
 - 两者都是接口，都能创建一个线程，但Callable可用通过Feture获得线程的返回值。在需要获得线程执行结果的场景中是呀Callable。
+18. Java中对象转换为String的常用方法?
+- 方法1、String objStr = (String) obj：    强制类型转换，对象obj为null，结果也为null，但是obj必须保证其本质是String类型的值，即可转换的值。例如，不能强制转换 (String) 123
+方法2、String objStr = obj.toString方法    ：调用对象的toString方法，必须保证本类或者父类已经重写了Object类的toString方法，如果没有重写toString方法，将默认调用Object类的toString方法，返回getClass().getName() + '@' + Integer.toHexString(hashCode())，并不是obj的实际字符串表示，同时还必须保证对象obj不能为null，否者调用toString方法会报空指针异常java.lang.NullPointerException。
+方法3、String objStr = String.valueOf(obj) :    对象obj为null，转换结果为字符串"null"，否则，返回 obj.toString() 的值。注意，如果为obj为null，这里转换后的值已经是字符串的“null”，判空不能再用 obj == nulll，而应该用 str.equals("null")。
+已经知道obj为String类型的情况下，可以直接使用方法1转换为String，转换为String后判null条件为：if (objStr != null)
+慎用方法2
+对于不知道具体类型的情况下，可以使用方法3，只是转换后String的判null条件改为：if (!objStr.equals('null'))

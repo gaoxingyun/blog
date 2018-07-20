@@ -6,6 +6,7 @@ categories:
 tags:
 - java
 ---
+# java代码
 
 ## 代码格式
 
@@ -92,17 +93,13 @@ private final static Pattern pattern = Pattern.compile("([A-Za-z\\d]+)(_)?");
 - util 工具
 - validator 校验
 
-
 ### 接口
 
 - I 接口开头
 
-
-
 ### 类
 
-- Impl 实现类结尾 
-
+- Impl 实现类结尾
 
 #### 领域模型
 
@@ -114,7 +111,6 @@ private final static Pattern pattern = Pattern.compile("([A-Za-z\\d]+)(_)?");
 
 - CO Client Object 客户端交互对象 API交互对象
 - DO Data Object 数据对象
-
 
 ### 方法
 
